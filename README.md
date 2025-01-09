@@ -91,7 +91,10 @@ This research and its associated code are made available under the MIT License. 
 ## **Acknowledgments**
 Special thanks to the authors of previous studies, such as Ji et al., MacKinlay, and Singh, whose work provided foundational insights into event study methodologies and COVID-19 market impacts.
 
-## **Contact**
-For questions or collaboration, please reach out at:
-Email: avi.rajbhandari.joshi@gmail.com
-Email: rajbhandariabhyudaya@gmail.com
+## Contact
+-----------
+
+For questions or collaboration, please reach out at:  
+**Email**: avi.rajbhandari.joshi@gmail.com  
+**Email**: rajbhandariabhyudaya@gmail.com
+
