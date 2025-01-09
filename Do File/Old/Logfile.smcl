@@ -1,0 +1,77 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\avira\Downloads\##1.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}29 Jun 2023, 21:34:42
+
+{com}. replace event_timeline = 1 if _n > 160 & _n < 191
+{txt}(30 real changes made)
+
+{com}. estudy energy con_dis cons_stp real_est mat ind health fin inf_tech utility air, datevar(calendar_date) evdate(01232020) dateformat(MDY) lb1(-30) ub1(0) lb2(0) ub2(30) eswlb(-170) eswub(-31) indexlist(mkt)
+
+Event study with common event date
+{res}{txt}Event date: {res}23jan2020{txt}, with {res}2{txt} event windows specified, under the Normality assumption
+{col 1}SECURITY{col 32}CAAR[-30,0]{col 32}{col 50}CAAR[0,30]{col 50}
+{hline 74}
+{col 1}energy{col 32} -2.90{col 32}%{col 50}-15.04{col 50}%**
+{col 1}con_dis{col 32}  0.91{col 32}%{col 50}  2.69{col 50}%
+{col 1}cons_stp{col 32} -0.93{col 32}%{col 50}  2.13{col 50}%
+{col 1}real_est{col 32}  1.73{col 32}%{col 50}  1.05{col 50}%
+{col 1}mat{col 32} -4.75{col 32}%{col 50} -2.07{col 50}%
+{col 1}ind{col 32} -1.51{col 32}%{col 50} -1.46{col 50}%
+{col 1}health{col 32} -0.91{col 32}%{col 50}  0.59{col 50}%
+{col 1}fin{col 32} -4.60{col 32}%{col 50} -7.02{col 50}%**
+{col 1}inf_tech{col 32}  3.07{col 32}%{col 50}  4.57{col 50}%*
+{col 1}utility{col 32}  5.66{col 32}%{col 50}  1.26{col 50}%
+{col 1}air{col 32} -2.25{col 32}%{col 50}-16.74{col 50}%***
+{col 1}Ptf CARs n 1 (11 securities){col 32} -0.60{col 32}%{col 50} -2.65{col 50}%**
+{col 1}CAAR group 1 (11 securities){col 32} -0.54{col 32}%{col 50} -2.57{col 50}%**
+{hline 74}
+*** p-value < .01, ** p-value <.05, * p-value <.1
+{res}
+{com}. regress energy mkt
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       221
+{txt}{hline 13}{c +}{hline 34}   F(1, 219)       = {res}   252.74
+{txt}       Model {c |} {res} .025117927         1  .025117927   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} .021765026       219  .000099384   {txt}R-squared       ={res}    0.5358
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.5336
+{txt}       Total {c |} {res} .046882953       220  .000213104   {txt}Root MSE        =   {res} .00997
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      energy{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}mkt {c |}{col 14}{res}{space 2}   1.0485{col 26}{space 2} .0659529{col 37}{space 1}   15.90{col 46}{space 3}0.000{col 54}{space 4}  .918516{col 67}{space 3} 1.178483
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.0021535{col 26}{space 2} .0006707{col 37}{space 1}   -3.21{col 46}{space 3}0.002{col 54}{space 4}-.0034753{col 67}{space 3}-.0008317
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}
+{com}. do "C:\Users\avira\AppData\Local\Temp\STD7a3c_000000.tmp"
+{txt}
+{com}. regress energy mkt
+
+{txt}      Source {c |}       SS           df       MS      Number of obs   ={res}       221
+{txt}{hline 13}{c +}{hline 34}   F(1, 219)       = {res}   252.74
+{txt}       Model {c |} {res} .025117927         1  .025117927   {txt}Prob > F        ={res}    0.0000
+{txt}    Residual {c |} {res} .021765026       219  .000099384   {txt}R-squared       ={res}    0.5358
+{txt}{hline 13}{c +}{hline 34}   Adj R-squared   ={res}    0.5336
+{txt}       Total {c |} {res} .046882953       220  .000213104   {txt}Root MSE        =   {res} .00997
+
+{txt}{hline 13}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}      energy{col 14}{c |} Coefficient{col 26}  Std. err.{col 38}      t{col 46}   P>|t|{col 54}     [95% con{col 67}f. interval]
+{hline 13}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 9}mkt {c |}{col 14}{res}{space 2}   1.0485{col 26}{space 2} .0659529{col 37}{space 1}   15.90{col 46}{space 3}0.000{col 54}{space 4}  .918516{col 67}{space 3} 1.178483
+{txt}{space 7}_cons {c |}{col 14}{res}{space 2}-.0021535{col 26}{space 2} .0006707{col 37}{space 1}   -3.21{col 46}{space 3}0.002{col 54}{space 4}-.0034753{col 67}{space 3}-.0008317
+{txt}{hline 13}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{res}{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. save "C:\Users\avira\Downloads\#1.dta"
+{txt}{p 0 4 2}
+file {bf}
+C:\Users\avira\Downloads\#1.dta{rm}
+saved
+{p_end}
+
+{com}. exit
